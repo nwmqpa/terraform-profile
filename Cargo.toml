@@ -1,0 +1,17 @@
+[package]
+name = "terraform-profile"
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+keywords = ["cli", "terraform", "profiles", "dotfiles", "credentials"]
+authors = ["Thomas Nicollet <thomas.nicollet@epitech.eu>"]
+description = "CLI Utility for managing Terraform Cloud profiles with a simple interface"
+readme = "README.md"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1"
+home = "0.5.3"
+clap = { version = "3.2.15", features = ["derive"] }
