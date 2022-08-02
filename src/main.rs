@@ -118,6 +118,7 @@ fn switch_profile(
     };
     if credentials_files.exists() {
         if credentials_files.is_symlink() {
+            std::fs::remove_file(&credentials_files)?;
             symlink_credentials(profile_path, credentials_files)?;
             println!("Switched credentials with the new profile");
         } else {
